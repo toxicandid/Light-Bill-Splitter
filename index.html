@@ -8,16 +8,25 @@
 </head>
 <body>
     <div class="container">
-        <h1>Light Bill Splitter</h1>
+        <h1>Bill Splitter</h1>
         <form id="billForm">
-            <label for="totalBill">Total Light Bill Amount (₹):</label>
-            <input type="number" id="totalBill" required>
+            <div class="form-group">
+                <label for="totalBill">Total Bill Amount (₹):</label>
+                <input type="number" id="totalBill" required placeholder="Enter total bill amount">
+            </div>
 
-            <label for="daysPersonA">Days Person A Stayed:</label>
-            <input type="number" id="daysPersonA" required>
+            <div class="form-group">
+                <label for="numPersons">Number of Persons:</label>
+                <select id="numPersons" required>
+                    <option value="" disabled selected>Select number of persons</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
 
-            <label for="daysPersonB">Days Person B Stayed:</label>
-            <input type="number" id="daysPersonB" required>
+            <div id="personInputs"></div>
 
             <button type="submit">Calculate</button>
         </form>
