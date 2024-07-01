@@ -9,6 +9,7 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
+    overflow: hidden;
 }
 
 /* Container styles */
@@ -19,8 +20,9 @@ body {
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 450px;
-    margin: 0 20px;
+    margin: 20px;
     text-align: center;
+    box-sizing: border-box;
 }
 
 /* Title styles */
@@ -127,4 +129,46 @@ button:hover {
 .result p:hover {
     transform: scale(1.03); /* Slight scaling effect */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    body {
+        padding: 0 1rem;
+        overflow: auto;
+    }
+
+    .container {
+        width: auto;
+        margin: 20px 10px;
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .form-group {
+        margin-bottom: 1rem;
+    }
+
+    input, select {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+
+    button {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+
+    .result {
+        padding: 1rem;
+    }
+
+    .result p {
+        padding: 0.75rem;
+        margin: 0.3rem 0;
+    }
 }
